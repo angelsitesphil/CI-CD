@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>SITESPHIL – Sophie’s MarkAngelSantos Services Inc.</title>
+    <title>SITESPHIL – Sophie’s Information Technology Services Inc.</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -52,7 +52,7 @@
   </head>
   <body>
     <header>
-      <h1>Sophie’s Information Technology Services Inc.</h1>
+      <h1>Sitesphil</h1>
       <p><strong>Outfoxing the Black Hats ®</strong></p>
     </header>
 
