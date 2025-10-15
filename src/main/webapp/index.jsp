@@ -52,7 +52,7 @@
   </head>
   <body>
     <header>
-      <h1>Sitesphil</h1>
+      <h1>Sitesphil Inc.</h1>
       <p><strong>Outfoxing the Black Hats ®</strong></p>
     </header>
 
