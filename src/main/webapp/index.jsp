@@ -52,7 +52,7 @@
   </head>
   <body>
     <header>
-      <h1>Sophie’s Information Technology Services Inc</h1>
+      <h1>SITESPHIL</h1>
       <p><strong>Outfoxing the Black Hats ®</strong></p>
     </header>
 
