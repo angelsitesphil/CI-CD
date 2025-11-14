@@ -1,4 +1,44 @@
+<%@ page import="java.sql.*" %>
+<%@ page import="java.io.*" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
+
+<%
+    // ======== Added Vulnerable Code for SonarQube Testing ========
+
+    // Hardcoded credentials (Vulnerability)
+    String user = "admin";
+    String pass = "123456";
+
+    // Get user parameter without validation — XSS
+    String q = request.getParameter("q");
+
+    // Print to page directly — XSS
+    if (q != null) {
+        out.println("<p><b>Input:</b> " + q + "</p>");
+    }
+
+    // Log sensitive data
+    System.out.println("User input = " + q);
+
+    // SQL Injection vulnerability
+    try {
+        Class.forName("com.mysql.jdbc.Driver"); // Deprecated driver (Hotspot)
+        Connection conn = DriverManager.getConnection(
+            "jdbc:mysql://localhost/testdb", user, pass);
+
+        Statement st = conn.createStatement();
+        ResultSet rs = st.executeQuery("SELECT * FROM users WHERE name='" + q + "'");
+
+        while (rs.next()) {
+            out.println("User found: " + rs.getString("name") + "<br>");
+        }
+
+    } catch (Exception e) {
+        // Exposing server info
+        e.printStackTrace(out);
+    }
+%>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -55,6 +95,14 @@
       <h1>Sitesphil</h1
       <p><strong>Outfoxing the Black Hats ®</strong></p>
     </header>
+
+    <!-- Search bar that triggers vulnerabilities -->
+    <div class="section">
+      <form method="GET">
+        <input type="text" name="q" placeholder="Enter text">
+        <button type="submit">Search</button>
+      </form>
+    </div>
 
     <div class="section">
       <h2>MISSION</h2>
