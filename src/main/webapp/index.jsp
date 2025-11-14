@@ -22,7 +22,7 @@
         margin: 0;
         font-size: 26px;
       }
-      .section {
+      .section
         padding: 40px;
         background: white;
         margin: 20px auto;
@@ -30,7 +30,7 @@
         border-radius: 10px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
-      h2 {
+      h2
         color: #002b5c;
         border-bottom: 2px solid #ddd;
         padding-bottom: 10px;
@@ -43,7 +43,7 @@
         color: white;
         text-align: center;
         padding: 20px;
-      }
+
       .footer a {
         color: #00c0ff;
         text-decoration: none;
@@ -52,7 +52,7 @@
   </head>
   <body>
     <header>
-      <h1>Sitesphil</h1>
+      <h1>Sitesphil</h1
       <p><strong>Outfoxing the Black Hats ®</strong></p>
     </header>
 
